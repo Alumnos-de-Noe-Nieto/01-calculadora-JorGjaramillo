@@ -1,5 +1,2 @@
 def validar_repeticiones_vld(cadena: str) -> bool:
-    for simbolo in "VLD":
-        if simbolo * 2 in cadena:
-            return False
-    return True
+    return all(simbolo * 2 not in cadena for simbolo in "VLD")

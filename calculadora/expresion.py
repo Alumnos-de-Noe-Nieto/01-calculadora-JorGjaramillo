@@ -3,6 +3,7 @@ from calculadora.conversor import romano_a_entero
 from calculadora.error import ExpresionInvalida
 from calculadora.parser import evaluar_expresion as parsear_expresion
 
+
 def evaluar(expresion: str) -> int:
     tokens = parsear_expresion(expresion)
     filtrados = [t for t in tokens if t.tipo != 'ESPACIO']

@@ -1,5 +1,2 @@
 def validar_repeticiones_icxm(cadena: str) -> bool:
-    for simbolo in "IXCM":
-        if simbolo * 4 in cadena:
-            return False
-    return True
+    return all(simbolo * 4 not in cadena for simbolo in "IXCM")
